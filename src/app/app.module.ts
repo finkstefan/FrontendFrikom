@@ -35,6 +35,14 @@ import { StudentComponent } from './components/student/student.component';
 import { StudentDialogComponent } from './components/dialogs/student-dialog/student-dialog.component';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { KategObjComponent } from './components/kateg-obj/kateg-obj.component';
+import { LanacComponent } from './components/lanac/lanac.component';
+import { MestoComponent } from './components/mesto/mesto.component';
+import { ObjekatComponent } from './components/objekat/objekat.component';
+import { KategObjDialogComponent } from './components/dialogs/kateg-obj-dialog/kateg-obj-dialog.component';
+import { LanacDialogComponent } from './components/dialogs/lanac-dialog/lanac-dialog.component';
+import { MestoDialogComponent } from './components/dialogs/mesto-dialog/mesto-dialog.component';
+import { ObjekatDialogComponent } from './components/dialogs/objekat-dialog/objekat-dialog.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +57,15 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     DepartmanDialogComponent,
     DepartmanComponent,
     StudentComponent,
-    StudentDialogComponent
+    StudentDialogComponent,
+    KategObjComponent,
+    LanacComponent,
+    MestoComponent,
+    ObjekatComponent,
+    KategObjDialogComponent,
+    LanacDialogComponent,
+    MestoDialogComponent,
+    ObjekatDialogComponent
   ],
   imports: [
     BrowserModule,
