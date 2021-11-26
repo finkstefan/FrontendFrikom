@@ -14,7 +14,7 @@ export class MestoService {
 
   public getAllMesto(): Observable<any> {
     return this.httpClient.get(`${MESTO_URL}`);
-    // {headers: new HttpHeaders({'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJhcGVyaWMiLCJleHAiOjE2Mzc4Mjk2OTksImlhdCI6MTYzNzc5MzY5OX0.4nTBaSqXxvCQcjjLDnepr8HjtXp_hjU-nfyp9t1N1TI'})}
+    // {headers: new HttpHeaders({'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJhcGVyaWMiLCJleHAiOjE2Mzc4OTI2MTIsImlhdCI6MTYzNzg1NjYxMn0.Ztc_EwMxZoEFDULeMokgHDhuoRHoLZlZh4D7DvvtQW8'})}
   }
 
   public addMesto(mesto: Mesto): Observable<any> {

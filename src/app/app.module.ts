@@ -43,6 +43,11 @@ import { KategObjDialogComponent } from './components/dialogs/kateg-obj-dialog/k
 import { LanacDialogComponent } from './components/dialogs/lanac-dialog/lanac-dialog.component';
 import { MestoDialogComponent } from './components/dialogs/mesto-dialog/mesto-dialog.component';
 import { ObjekatDialogComponent } from './components/dialogs/objekat-dialog/objekat-dialog.component';
+import { IstorNielComponent } from './components/istor-niel/istor-niel.component';
+import { IstorNedComponent } from './components/istor-ned/istor-ned.component';
+import { IstorMesComponent } from './components/istor-mes/istor-mes.component';
+import { IstorDneComponent } from './components/istor-dne/istor-dne.component';
+import { IstorCenaComponent } from './components/istor-cena/istor-cena.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +70,12 @@ import { ObjekatDialogComponent } from './components/dialogs/objekat-dialog/obje
     KategObjDialogComponent,
     LanacDialogComponent,
     MestoDialogComponent,
-    ObjekatDialogComponent
+    ObjekatDialogComponent,
+    IstorNielComponent,
+    IstorNedComponent,
+    IstorMesComponent,
+    IstorDneComponent,
+    IstorCenaComponent
   ],
   imports: [
     BrowserModule,
