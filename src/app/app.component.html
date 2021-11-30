@@ -1,4 +1,5 @@
 <mat-sidenav-container class="example-container">
+
   <mat-sidenav mode="over" [fixedInViewport]="true" opened mode="side">
     <mat-accordion>
       <a mat-button style="text-align: center">
@@ -15,42 +16,31 @@
             Aplikacija za vodjenje evidencije
           </mat-panel-description>
         </mat-expansion-panel-header>
+     
         <mat-nav-list>
-          <a [routerLink]="['/fakultet']" mat-button>Fakultet</a>
+          <a [routerLink]="['/vrstaambal']" mat-button>Vrsta ambalaze</a>
         </mat-nav-list>
         <mat-nav-list>
-          <a [routerLink]="['/departman']" mat-button>Departman</a>
+          <a [routerLink]="['/jedmere']" mat-button>Jedinica mere</a>
         </mat-nav-list>
         <mat-nav-list>
-          <a [routerLink]="['/status']" mat-button>Status</a>
+          <a [routerLink]="['/kategorija']" mat-button>Kategorija</a>
         </mat-nav-list>
         <mat-nav-list>
-          <a [routerLink]="['/mesto']" mat-button>Mesto</a>
+          <a [routerLink]="['/artikl']" mat-button>Artikl</a>
         </mat-nav-list>
-        <mat-nav-list>
-          <a [routerLink]="['/kategObj']" mat-button>Kategorija Objekta</a>
-        </mat-nav-list>
-        <mat-nav-list>
-          <a [routerLink]="['/lanac']" mat-button>Lanac</a>
-        </mat-nav-list>
-        <mat-nav-list>
-          <a [routerLink]="['/objekat']" mat-button>Objekat</a>
-        </mat-nav-list>
-        <mat-nav-list>
-          <a [routerLink]="['/istorDne']" mat-button>Istorija Dnevni</a>
-        </mat-nav-list>
-        <mat-nav-list>
-          <a [routerLink]="['/istorNed']" mat-button>Istorija Nedeljni</a>
-        </mat-nav-list>
-        <mat-nav-list>
-          <a [routerLink]="['/istorMes']" mat-button>Istorija Mesečni</a>
-        </mat-nav-list>
-        <mat-nav-list>
-          <a [routerLink]="['/istorNiel']" mat-button>Istorija Nielsen</a>
-        </mat-nav-list>
-        <mat-nav-list>
-          <a [routerLink]="['/istorCena']" mat-button>Istorija Cena</a>
-        </mat-nav-list>
+         <mat-nav-list>
+                    <a mat-button [routerLink] = "['/dnevni']">Dnevni</a>
+                </mat-nav-list>
+                <mat-nav-list>
+                    <a mat-button [routerLink] = "['/datum']">Datum</a>
+                </mat-nav-list>
+                <mat-nav-list>
+                    <a mat-button [routerLink] = "['/mesecni']">Mesecni</a>
+                </mat-nav-list>
+                <mat-nav-list>
+                    <a mat-button [routerLink] = "['/nedeljni']">Nedeljni</a>
+                </mat-nav-list>
       </mat-expansion-panel>
       <mat-expansion-panel>
         <mat-expansion-panel-header>
@@ -75,3 +65,4 @@
   </mat-sidenav>
   <router-outlet></router-outlet>
 </mat-sidenav-container>
+
