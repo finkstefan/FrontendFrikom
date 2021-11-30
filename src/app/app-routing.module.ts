@@ -7,6 +7,10 @@ import { DepartmanComponent } from './components/departman/departman.component';
 import { FakultetComponent } from './components/fakultet/fakultet.component';
 import { StatusComponent } from './components/status/status.component';
 import { StudentComponent } from './components/student/student.component';
+import { VrstaAmbalComponent } from './components/vrstaambal/vrstaambal.component';
+import { JedMereComponent } from './components/jedmere/jedmere.component';
+import { KategorijaComponent } from './components/kategorija/kategorija.component';
+import { ArtiklComponent } from './components/artikl/artikl.component';
 
 
 const routes: Routes = [
@@ -17,6 +21,10 @@ const routes: Routes = [
   {path:'home', component: HomeComponent},
   {path:'about', component: AboutComponent},
   {path:'author', component: AuthorComponent},
+  {path:'vrstaambal', component: VrstaAmbalComponent},
+  {path:'jedmere', component: JedMereComponent},
+  {path:'kategorija', component: KategorijaComponent},
+  {path:'artikl', component: ArtiklComponent},
   {path:'', redirectTo: 'home', pathMatch: 'full'},
 ];
 

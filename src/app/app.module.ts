@@ -35,6 +35,14 @@ import { StudentComponent } from './components/student/student.component';
 import { StudentDialogComponent } from './components/dialogs/student-dialog/student-dialog.component';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { VrstaAmbalComponent } from './components/vrstaambal/vrstaambal.component';
+import { VrstaAmbalDialogComponent } from './components/dialogs/vrstaambal-dialog/vrstaambal-dialog.component';
+import { JedMereComponent } from './components/jedmere/jedmere.component';
+import { JedMereDialogComponent } from './components/dialogs/jedmere-dialog/jedmere-dialog.component';
+import { KategorijaComponent } from './components/kategorija/kategorija.component';
+import { KategorijaDialogComponent } from './components/dialogs/kategorija-dialog/kategorija-dialog.component';
+import { ArtiklComponent } from './components/artikl/artikl.component';
+import { ArtiklDialogComponent } from './components/dialogs/artikl-dialog/artikl-dialog.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +57,19 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     DepartmanDialogComponent,
     DepartmanComponent,
     StudentComponent,
-    StudentDialogComponent
+    StudentDialogComponent,
+    VrstaAmbalComponent,
+    VrstaAmbalDialogComponent,
+    JedMereComponent,
+    JedMereDialogComponent,
+    KategorijaComponent,
+    KategorijaDialogComponent,
+    KategorijaComponent,
+    KategorijaDialogComponent,
+    ArtiklComponent,
+    ArtiklDialogComponent,
+    ArtiklComponent,
+    ArtiklDialogComponent
   ],
   imports: [
     BrowserModule,
