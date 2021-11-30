@@ -2,9 +2,8 @@ import { Component, Inject, OnInit, ɵCompiler_compileModuleAndAllComponentsSync
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Dnevni } from 'src/app/models/dnevni';
-import {Smer} from 'src/app/models/smer';
 import { DnevniService } from 'src/app/services/dnevni.service';
-import { SmerService } from 'src/app/services/smer.service';
+
 @Component({
   selector: 'app-dnevni-dialog',
   templateUrl: './dnevni-dialog.component.html',
@@ -13,9 +12,8 @@ import { SmerService } from 'src/app/services/smer.service';
 export class DnevniDialogComponent implements OnInit {
 
   public flag:number;
-  smerovi: Smer[]; 
 
-  constructor(public smerService : SmerService,
+  constructor(
     public snackBar: MatSnackBar,
     public dialogRef: MatDialogRef<DnevniDialogComponent>,
     @Inject (MAT_DIALOG_DATA) public data: Dnevni,

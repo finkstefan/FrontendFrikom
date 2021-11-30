@@ -5,7 +5,6 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Subscription } from 'rxjs';
 import { Dnevni } from 'src/app/models/dnevni';
-import { Smer } from 'src/app/models/smer';
 import { DnevniService } from 'src/app/services/dnevni.service';
 import { DnevniDialogComponent } from '../dialogs/dnevni-dialog/dnevni-dialog.component';
 
