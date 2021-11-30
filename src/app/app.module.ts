@@ -25,6 +25,14 @@ import { DnevniDialogComponent } from './components/dialogs/dnevni-dialog/dnevni
 import { MatSelectModule } from '@angular/material/select';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { VrstaAmbalComponent } from './components/vrstaambal/vrstaambal.component';
+import { VrstaAmbalDialogComponent } from './components/dialogs/vrstaambal-dialog/vrstaambal-dialog.component';
+import { JedMereComponent } from './components/jedmere/jedmere.component';
+import { JedMereDialogComponent } from './components/dialogs/jedmere-dialog/jedmere-dialog.component';
+import { KategorijaComponent } from './components/kategorija/kategorija.component';
+import { KategorijaDialogComponent } from './components/dialogs/kategorija-dialog/kategorija-dialog.component';
+import { ArtiklComponent } from './components/artikl/artikl.component';
+import { ArtiklDialogComponent } from './components/dialogs/artikl-dialog/artikl-dialog.component';
 import { DatumComponent } from './components/datum/datum.component';
 import { DatumDialogComponent } from './components/dialogs/datum-dialog/datum-dialog.component';
 import { MesecniComponent } from './components/mesecni/mesecni.component';
@@ -33,13 +41,30 @@ import { NedeljniComponent } from './components/nedeljni/nedeljni.component';
 import { NedeljniDialogComponent } from './components/dialogs/nedeljni-dialog/nedeljni-dialog.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AuthorComponent,
     AboutComponent,
+    FakultetComponent,
+    FakultetDialogComponent,
+    StatusComponent,
+    StatusDialogComponent,
+    DepartmanDialogComponent,
+    DepartmanComponent,
+    StudentComponent,
+    StudentDialogComponent,
+    VrstaAmbalComponent,
+    VrstaAmbalDialogComponent,
+    JedMereComponent,
+    JedMereDialogComponent,
+    KategorijaComponent,
+    KategorijaDialogComponent,
+   
+    ArtiklComponent,
+    ArtiklDialogComponent,
+    
     DnevniComponent,
     DnevniDialogComponent,
     DatumComponent,
@@ -48,7 +73,6 @@ import { NedeljniDialogComponent } from './components/dialogs/nedeljni-dialog/ne
     MesecniDialogComponent,
     NedeljniComponent,
     NedeljniDialogComponent
-
   ],
   imports: [
     BrowserModule,
