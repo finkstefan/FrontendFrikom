@@ -1,0 +1,38 @@
+
+<div class="container">
+    <h3 mat-dialog-title *ngIf="flag == 1">Dodavanje novog datuma  </h3>
+    <h3 mat-dialog-title *ngIf="flag == 2">Modifikacija postojeceg datuma sa idom {{data.idDatum}}</h3>
+    <h3 mat-dialog-title *ngIf="flag == 3">Brisanje datuma koji se nalazi na spisku: {{data.datum}}</h3>
+    <form class="mat-dialog-content" #formControl= "ngForm">
+        <div class="form">
+           <mat-form-field>
+               <input matInput placeholder="idDatum" [(ngModel)] = "data.idDatum" name="idDatum" [disabled]= "flag == 3" required>
+          
+           </mat-form-field>     
+        </div>
+        <div class="form">
+            <mat-form-field>
+                <input matInput placeholder="datum" [(ngModel)] = "data.datum" name="datum" [disabled]= "flag == 3" required>
+            </mat-form-field>     
+         </div>
+        
+
+    
+        <div mat-dialog-actions>
+            <button mat-button *ngIf="flag==1" type="submit" [mat-dialog-close]="1" (click)="addDatum()" [disabled]="!formControl.valid">
+                Sačuvaj
+            </button>
+            <button mat-button *ngIf="flag==2" type="submit" [mat-dialog-close]="1" (click)="updateDatum()" [disabled]="!formControl.valid">
+                Sačuvaj 
+            </button>
+            <button mat-button *ngIf="flag==3" type="submit" [mat-dialog-close]="1" (click)="deleteDatum()">
+                Obriši
+            </button>
+            <button mat-button (click)="cancel()">
+                Poništi
+            </button>
+        </div>
+
+    </form>
+
+</div> 
