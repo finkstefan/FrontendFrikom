@@ -1,4 +1,5 @@
 <mat-sidenav-container class="example-container">
+
   <mat-sidenav mode="over" [fixedInViewport]="true" opened mode="side">
     <mat-accordion>
       <a mat-button style="text-align: center">
@@ -28,6 +29,18 @@
         <mat-nav-list>
           <a [routerLink]="['/artikl']" mat-button>Artikl</a>
         </mat-nav-list>
+         <mat-nav-list>
+                    <a mat-button [routerLink] = "['/dnevni']">Dnevni</a>
+                </mat-nav-list>
+                <mat-nav-list>
+                    <a mat-button [routerLink] = "['/datum']">Datum</a>
+                </mat-nav-list>
+                <mat-nav-list>
+                    <a mat-button [routerLink] = "['/mesecni']">Mesecni</a>
+                </mat-nav-list>
+                <mat-nav-list>
+                    <a mat-button [routerLink] = "['/nedeljni']">Nedeljni</a>
+                </mat-nav-list>
       </mat-expansion-panel>
       <mat-expansion-panel>
         <mat-expansion-panel-header>
@@ -52,3 +65,4 @@
   </mat-sidenav>
   <router-outlet></router-outlet>
 </mat-sidenav-container>
+

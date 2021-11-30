@@ -1,0 +1,70 @@
+<mat-toolbar color="primary">
+    <span class="title-center">Istorija dnevni</span>
+  </mat-toolbar>
+  
+  
+  <div class="container mat-elevation-z8">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Pretraga"
+        (keyup)="applyFilter($event.target.value)"
+      />
+    </mat-form-field>
+  <mat-table #table [dataSource]="dataSource" matSort class="mat-cell">
+  
+    <ng-container matColumnDef="idIstorDne">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Id</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{ row.idIstorDne }}</mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="idDatum">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Datum</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{ row.idDatum }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="idObjekat">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Objekat</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.idObjekat }}</mat-cell>
+      </ng-container>
+
+    <ng-container matColumnDef="idArtikl">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Artikl</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.idArtikl }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="ulazDobavljac">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Ulaz dobavljač</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.ulazDobavljac }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="ulazMagacin">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Ulaz magacin</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.ulazMagacin }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="povracajDobavljac">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Povraćaj dobavljač</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.povracajDobavljac }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="povracajMagacin">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Povraćaj magacin</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.povracajMagacin }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="prodaja">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Prodaja</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.prodaja }}</mat-cell>
+      </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row style="cursor:pointer;" *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+    <mat-paginator
+    [length]="100"
+    [pageSize]="5"
+    [pageSizeOptions]="[5, 10, 25, 100]">
+  </mat-paginator>
+  </div>
+  

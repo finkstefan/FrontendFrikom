@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './components/core/about/about.component';
 import { AuthorComponent } from './components/core/author/author.component';
 import { HomeComponent } from './components/core/home/home.component';
+
 import { DepartmanComponent } from './components/departman/departman.component';
 import { FakultetComponent } from './components/fakultet/fakultet.component';
 import { StatusComponent } from './components/status/status.component';
@@ -13,7 +14,14 @@ import { KategorijaComponent } from './components/kategorija/kategorija.componen
 import { ArtiklComponent } from './components/artikl/artikl.component';
 
 
+import { DnevniComponent } from './components/grupa/dnevni.component';
+import { MesecniComponent } from './components/mesecni/mesecni.component';
+import { NedeljniComponent } from './components/nedeljni/nedeljni.component';
+
+
+//ovde dodajemo rute
 const routes: Routes = [
+
   {path:'fakultet', component: FakultetComponent},
   {path:'student', component: StudentComponent},
   {path:'departman', component: DepartmanComponent},
@@ -25,7 +33,11 @@ const routes: Routes = [
   {path:'jedmere', component: JedMereComponent},
   {path:'kategorija', component: KategorijaComponent},
   {path:'artikl', component: ArtiklComponent},
-  {path:'', redirectTo: 'home', pathMatch: 'full'},
+ {path: 'dnevni', component: DnevniComponent},
+ {path: 'mesecni', component: MesecniComponent},
+ {path: 'nedeljni', component: NedeljniComponent},
+ { path: '', redirectTo: '/home', pathMatch: 'full'}
+
 ];
 
 @NgModule({
@@ -33,3 +45,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
