@@ -17,22 +17,14 @@ import { AboutComponent } from './components/core/about/about.component';
 import { MatTableModule } from '@angular/material/table'
 import { HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { FakultetComponent } from './components/fakultet/fakultet.component';
-import { DepartmanComponent } from './components/departman/departman.component';
-import { FakultetDialogComponent } from './components/dialogs/fakultet-dialog/fakultet-dialog.component';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { StatusComponent } from './components/status/status.component';
-import { StatusDialogComponent } from './components/dialogs/status-dialog/status-dialog.component';
-import { DepartmanDialogComponent } from './components/dialogs/departman-dialog/departman-dialog.component';
 import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
-import { StudentComponent } from './components/student/student.component';
-import { StudentDialogComponent } from './components/dialogs/student-dialog/student-dialog.component';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { KategObjComponent } from './components/kateg-obj/kateg-obj.component';
@@ -49,20 +41,30 @@ import { IstorMesComponent } from './components/istor-mes/istor-mes.component';
 import { IstorDneComponent } from './components/istor-dne/istor-dne.component';
 import { IstorCenaComponent } from './components/istor-cena/istor-cena.component';
 
+import { DatumComponent } from './components/datum/datum.component';
+import { DatumDialogComponent } from './components/dialogs/datum-dialog/datum-dialog.component';
+import { MesecniComponent } from './components/mesecni/mesecni.component';
+import { MesecniDialogComponent } from './components/dialogs/mesecni-dialog/mesecni-dialog.component';
+import { NedeljniComponent } from './components/nedeljni/nedeljni.component';
+import { NedeljniDialogComponent } from './components/dialogs/nedeljni-dialog/nedeljni-dialog.component';
+import { DnevniDialogComponent } from './components/dialogs/dnevni-dialog/dnevni-dialog.component'; 
+import { DnevniComponent } from './components/grupa/dnevni.component';
+
+import { VrstaAmbalComponent } from './components/vrstaambal/vrstaambal.component';
+import { VrstaAmbalDialogComponent } from './components/dialogs/vrstaambal-dialog/vrstaambal-dialog.component';
+import { JedMereComponent } from './components/jedmere/jedmere.component';
+import { JedMereDialogComponent } from './components/dialogs/jedmere-dialog/jedmere-dialog.component';
+import { KategorijaComponent } from './components/kategorija/kategorija.component';
+import { KategorijaDialogComponent } from './components/dialogs/kategorija-dialog/kategorija-dialog.component';
+import { ArtiklComponent } from './components/artikl/artikl.component';
+import { ArtiklDialogComponent } from './components/dialogs/artikl-dialog/artikl-dialog.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AuthorComponent,
     AboutComponent,
-    FakultetComponent,
-    FakultetDialogComponent,
-    StatusComponent,
-    StatusDialogComponent,
-    DepartmanDialogComponent,
-    DepartmanComponent,
-    StudentComponent,
-    StudentDialogComponent,
     KategObjComponent,
     LanacComponent,
     MestoComponent,
@@ -75,7 +77,23 @@ import { IstorCenaComponent } from './components/istor-cena/istor-cena.component
     IstorNedComponent,
     IstorMesComponent,
     IstorDneComponent,
-    IstorCenaComponent
+    IstorCenaComponent,
+    DnevniComponent,
+    DnevniDialogComponent,
+    DatumComponent,
+    DatumDialogComponent,
+    MesecniComponent,
+    MesecniDialogComponent,
+    NedeljniComponent,
+    NedeljniDialogComponent,
+    VrstaAmbalComponent,
+    VrstaAmbalDialogComponent,
+    JedMereComponent,
+    JedMereDialogComponent,
+    KategorijaComponent,
+    KategorijaDialogComponent,
+    ArtiklComponent,
+    ArtiklDialogComponent
   ],
   imports: [
     BrowserModule,
