@@ -4,6 +4,7 @@ import { ArtiklComponent } from './components/artikl/artikl.component';
 import { AboutComponent } from './components/core/about/about.component';
 import { AuthorComponent } from './components/core/author/author.component';
 import { HomeComponent } from './components/core/home/home.component';
+import { DatumComponent } from './components/datum/datum.component';
 import { DnevniComponent } from './components/dnevni/dnevni.component';
 import { IstorCenaComponent } from './components/istor-cena/istor-cena.component';
 import { IstorDneComponent } from './components/istor-dne/istor-dne.component';
@@ -24,6 +25,7 @@ import { VrstaAmbalComponent } from './components/vrstaambal/vrstaambal.componen
 
 
 const routes: Routes = [
+  {path: 'datum', component: DatumComponent},
   {path: 'login', component: LoginComponent},
   {path: 'mesecni', component: MesecniComponent},
  {path: 'nedeljni', component: NedeljniComponent},
