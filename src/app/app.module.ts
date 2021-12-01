@@ -48,7 +48,7 @@ import { MesecniDialogComponent } from './components/dialogs/mesecni-dialog/mese
 import { NedeljniComponent } from './components/nedeljni/nedeljni.component';
 import { NedeljniDialogComponent } from './components/dialogs/nedeljni-dialog/nedeljni-dialog.component';
 import { DnevniDialogComponent } from './components/dialogs/dnevni-dialog/dnevni-dialog.component'; 
-import { DnevniComponent } from './components/grupa/dnevni.component';
+import { DnevniComponent } from './components/dnevni/dnevni.component';
 
 import { VrstaAmbalComponent } from './components/vrstaambal/vrstaambal.component';
 import { VrstaAmbalDialogComponent } from './components/dialogs/vrstaambal-dialog/vrstaambal-dialog.component';

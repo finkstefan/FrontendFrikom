@@ -4,7 +4,7 @@ import { ArtiklComponent } from './components/artikl/artikl.component';
 import { AboutComponent } from './components/core/about/about.component';
 import { AuthorComponent } from './components/core/author/author.component';
 import { HomeComponent } from './components/core/home/home.component';
-import { DnevniComponent } from './components/grupa/dnevni.component';
+import { DnevniComponent } from './components/dnevni/dnevni.component';
 import { IstorCenaComponent } from './components/istor-cena/istor-cena.component';
 import { IstorDneComponent } from './components/istor-dne/istor-dne.component';
 import { IstorMesComponent } from './components/istor-mes/istor-mes.component';
