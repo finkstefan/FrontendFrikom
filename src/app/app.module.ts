@@ -15,7 +15,7 @@ import { HomeComponent } from './components/core/home/home.component';
 import { AuthorComponent } from './components/core/author/author.component';
 import { AboutComponent } from './components/core/about/about.component';
 import { MatTableModule } from '@angular/material/table'
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -58,6 +58,8 @@ import { KategorijaComponent } from './components/kategorija/kategorija.componen
 import { KategorijaDialogComponent } from './components/dialogs/kategorija-dialog/kategorija-dialog.component';
 import { ArtiklComponent } from './components/artikl/artikl.component';
 import { ArtiklDialogComponent } from './components/dialogs/artikl-dialog/artikl-dialog.component';
+import { AuthInterceptor } from './interceptor';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +95,8 @@ import { ArtiklDialogComponent } from './components/dialogs/artikl-dialog/artikl
     KategorijaComponent,
     KategorijaDialogComponent,
     ArtiklComponent,
-    ArtiklDialogComponent
+    ArtiklDialogComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -117,7 +120,9 @@ import { ArtiklDialogComponent } from './components/dialogs/artikl-dialog/artikl
     MatSortModule,
     MatPaginatorModule
   ],
-  providers: [],
+  providers: [
+    //{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

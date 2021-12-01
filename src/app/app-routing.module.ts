@@ -14,6 +14,7 @@ import { JedMereComponent } from './components/jedmere/jedmere.component';
 import { KategObjComponent } from './components/kateg-obj/kateg-obj.component';
 import { KategorijaComponent } from './components/kategorija/kategorija.component';
 import { LanacComponent } from './components/lanac/lanac.component';
+import { LoginComponent } from './components/login/login.component';
 import { MesecniComponent } from './components/mesecni/mesecni.component';
 import { MestoComponent } from './components/mesto/mesto.component';
 import { NedeljniComponent } from './components/nedeljni/nedeljni.component';
@@ -23,6 +24,7 @@ import { VrstaAmbalComponent } from './components/vrstaambal/vrstaambal.componen
 
 
 const routes: Routes = [
+  {path: 'login', component: LoginComponent},
   {path: 'mesecni', component: MesecniComponent},
  {path: 'nedeljni', component: NedeljniComponent},
  {path: 'dnevni', component: DnevniComponent},
@@ -42,7 +44,7 @@ const routes: Routes = [
   {path:'home', component: HomeComponent},
   {path:'about', component: AboutComponent},
   {path:'author', component: AuthorComponent},
-  {path:'', redirectTo: 'home', pathMatch: 'full'},
+  {path:'', redirectTo: 'login', pathMatch: 'full'},
 ];
 
 @NgModule({
