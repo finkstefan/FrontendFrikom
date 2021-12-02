@@ -32,8 +32,8 @@ export class DnevniService {
     //header = header.append('Content-Type', 'application/json');
     let header = new HttpHeaders();
     console.log(localStorage.getItem('token'));
-    header = header.append('Authorization', 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJhcGVyaWMiLCJleHAiOjE2MzgzODcwNjYsImlhdCI6MTYzODM1MTA2Nn0.wjtpke1jcAqbVlo7znUwEGVM8bd--Gj2q8lw8V7N3Nc');
-    return this.httpClient.get(`${DNEVNI_URL}`, {headers: header});
+    //header = header.append('Authorization', 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJhcGVyaWMiLCJleHAiOjE2Mzg0MjE1MTMsImlhdCI6MTYzODM4NTUxM30.BKLWyMkvnlLmjkpzfoNWspl76B45RAqdjQICGBeWbFE');
+    return this.httpClient.get(`${DNEVNI_URL}`);
   }
 
 

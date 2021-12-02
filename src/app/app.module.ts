@@ -60,6 +60,8 @@ import { ArtiklComponent } from './components/artikl/artikl.component';
 import { ArtiklDialogComponent } from './components/dialogs/artikl-dialog/artikl-dialog.component';
 import { AuthInterceptor } from './interceptor';
 import { LoginComponent } from './components/login/login.component';
+import { NielsenComponent } from './components/nielsen/nielsen.component';
+import { NielsenDialogComponent } from './components/dialogs/nielsen-dialog/nielsen-dialog.component';
 
 @NgModule({
   declarations: [
@@ -96,7 +98,9 @@ import { LoginComponent } from './components/login/login.component';
     KategorijaDialogComponent,
     ArtiklComponent,
     ArtiklDialogComponent,
-    LoginComponent
+    LoginComponent,
+    NielsenComponent,
+    NielsenDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -121,7 +125,7 @@ import { LoginComponent } from './components/login/login.component';
     MatPaginatorModule
   ],
   providers: [
-    //{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

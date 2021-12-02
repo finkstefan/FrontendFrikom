@@ -19,12 +19,14 @@ import { LoginComponent } from './components/login/login.component';
 import { MesecniComponent } from './components/mesecni/mesecni.component';
 import { MestoComponent } from './components/mesto/mesto.component';
 import { NedeljniComponent } from './components/nedeljni/nedeljni.component';
+import { NielsenComponent } from './components/nielsen/nielsen.component';
 import { ObjekatComponent } from './components/objekat/objekat.component';
 import { VrstaAmbalComponent } from './components/vrstaambal/vrstaambal.component';
 
 
 
 const routes: Routes = [
+  { path: 'nielsen', component: NielsenComponent },
   {path: 'datum', component: DatumComponent},
   {path: 'login', component: LoginComponent},
   {path: 'mesecni', component: MesecniComponent},
