@@ -13,7 +13,7 @@ import { IstorMesService } from 'src/app/services/istor-mes.service';
 })
 export class IstorMesComponent implements OnInit, OnDestroy {
 
-  displayedColumns = ["idIstorMes","idDatumOd","idDatumDo", "idObjekat","idArtikl", "prodaja"];
+  displayedColumns = ["idIstorMes","datum1","datum2", "objekat","artikl", "prodaja"];
   dataSource: MatTableDataSource<IstorMes>;
   subscription: Subscription;
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
