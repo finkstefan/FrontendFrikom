@@ -20,22 +20,22 @@
       <!--Objekat -->
       <ng-container matColumnDef="objekat">
         <mat-header-cell *matHeaderCellDef mat-sort-header>Objekat</mat-header-cell>
-        <mat-cell *matCellDef="let row">{{ row.objekat }}</mat-cell>
+        <mat-cell *matCellDef="let row">{{ row.objekat.nazivObjekta }}</mat-cell>
       </ng-container>
        <!--Artikl -->
       <ng-container matColumnDef="artikl">
         <mat-header-cell *matHeaderCellDef mat-sort-header>Artikl</mat-header-cell>
-        <mat-cell *matCellDef="let row">{{ row.artikl }}</mat-cell>
+        <mat-cell *matCellDef="let row">{{ row.artikl.naziv }}</mat-cell>
       </ng-container>
       <!-- Datum od -->
       <ng-container matColumnDef="datum1">
         <mat-header-cell *matHeaderCellDef mat-sort-header>Datum od</mat-header-cell>
-        <mat-cell *matCellDef="let row">{{ row.datum1 }}</mat-cell>
+        <mat-cell *matCellDef="let row">{{ row.datum1.datum }}</mat-cell>
       </ng-container>
       <!-- Datum do -->
       <ng-container matColumnDef="datum2">
         <mat-header-cell *matHeaderCellDef mat-sort-header>Datum do</mat-header-cell>
-        <mat-cell *matCellDef="let row">{{ row.datum2 }}</mat-cell>
+        <mat-cell *matCellDef="let row">{{ row.datum2.datum }}</mat-cell>
       </ng-container>
       <!-- Action Buttons -->
       <ng-container matColumnDef="actions">
