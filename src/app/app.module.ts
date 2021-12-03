@@ -125,7 +125,7 @@ import { NielsenDialogComponent } from './components/dialogs/nielsen-dialog/niel
     MatPaginatorModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+   // { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
