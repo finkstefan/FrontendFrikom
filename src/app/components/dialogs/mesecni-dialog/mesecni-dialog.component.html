@@ -10,6 +10,48 @@
                 <input matInput placeholder="Prodaja" [(ngModel)] = "data.prodaja" name="prodaja" [disabled]= "flag == 3" required>
             </mat-form-field>     
          </div>
+
+         <div class="form">
+            <mat-form-field>
+                <mat-select [(ngModel)]="data.objekat" placeholder="Objekat" name="objekat" [compareWith]="compareTo" [disabled]="flag == 3">
+                  <mat-option *ngFor="let objekat of objekti" [value]="objekat">
+                    {{ objekat.nazivObjekta }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+         </div>
+
+         <div class="form">
+            <mat-form-field>
+                <mat-select [(ngModel)]="data.artikl" placeholder="Artikl" name="artikl" [compareWith]="compareTo" [disabled]="flag == 3">
+                  <mat-option *ngFor="let artikl of artikli" [value]="artikl">
+                    {{ artikl.naziv }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+         </div>
+
+         <div class="form">
+            <mat-form-field>
+                <mat-select [(ngModel)]="data.datum1" placeholder="Datum od" name="datumod" [compareWith]="compareTo" [disabled]="flag == 3">
+                  <mat-option *ngFor="let datum of datumi" [value]="datum">
+                    {{ datum.datum }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+         </div>
+
+         <div class="form">
+            <mat-form-field>
+                <mat-select [(ngModel)]="data.datum2" placeholder="Datum do" name="datumdo" [compareWith]="compareTo" [disabled]="flag == 3">
+                  <mat-option *ngFor="let datum of datumi" [value]="datum">
+                    {{ datum.datum }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+         </div>
+
+         <!--
         <div class="form">
             <mat-form-field>
                 <input matInput placeholder="Objekat" [(ngModel)] = "data.objekat" name="objekat" [disabled]= "flag == 3" required>
@@ -29,7 +71,7 @@
             <mat-form-field>
                 <input matInput placeholder="Datum do" [(ngModel)] = "data.datum2" name="datum2" [disabled]= "flag == 3" required>
             </mat-form-field>     
-         </div>
+         </div>-->
     
         <div mat-dialog-actions>
             <button mat-button *ngIf="flag==1" type="submit" [mat-dialog-close]="1" (click)="addMesecni()" [disabled]="!formControl.valid">

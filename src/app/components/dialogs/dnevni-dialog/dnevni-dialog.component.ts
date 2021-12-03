@@ -2,7 +2,13 @@ import { Component, Inject, OnInit, ɵCompiler_compileModuleAndAllComponentsSync
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Dnevni } from 'src/app/models/dnevni';
+import { Artikl } from 'src/app/models/artikl';
+import { Objekat } from 'src/app/models/objekat';
+import { Datum } from 'src/app/models/datum';
 import { DnevniService } from 'src/app/services/dnevni.service';
+import { ObjekatService } from 'src/app/services/objekat.service';
+import { ArtiklService } from 'src/app/services/artikl.service';
+import { DatumService } from 'src/app/services/datum.service.service';
 
 @Component({
   selector: 'app-dnevni-dialog',
@@ -12,20 +18,38 @@ import { DnevniService } from 'src/app/services/dnevni.service';
 export class DnevniDialogComponent implements OnInit {
 
   public flag:number;
+  artikli:Artikl[];
+objekti:Objekat[];
+datumi:Datum[];
 
   constructor(
     public snackBar: MatSnackBar,
     public dialogRef: MatDialogRef<DnevniDialogComponent>,
     @Inject (MAT_DIALOG_DATA) public data: Dnevni,
-    public dnevniService : DnevniService) { }
+    public dnevniService : DnevniService,
+    public artiklService: ArtiklService,
+    public objekatService: ObjekatService,
+    public datumService: DatumService) { }
 
   ngOnInit(): void {
    
-    /*this.smerService.getAllSmerovi().subscribe(
+    this.artiklService.getAllArtikli().subscribe(
       data => {
-        this.smerovi = data;
+        this.artikli = data;
       }
-    );*/
+    );
+
+    this.objekatService.getAllObjekat().subscribe(
+      data => {
+        this.objekti = data;
+      }
+    );
+
+    this.datumService.getAllDatum().subscribe(
+      data => {
+        this.datumi = data;
+      }
+    );
     }
 
     compareTo(a ,b) {

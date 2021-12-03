@@ -4,8 +4,12 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Subscription } from 'rxjs';
+import { Artikl } from 'src/app/models/artikl';
+import { Datum } from 'src/app/models/datum';
 import { Nielsen } from 'src/app/models/nielsen';
+import { Objekat } from 'src/app/models/objekat';
 import {NielsenService} from 'src/app/services/nielsen.service';
+import { DatumComponent } from '../datum/datum.component';
 import { NielsenDialogComponent } from '../dialogs/nielsen-dialog/nielsen-dialog.component';
 
 @Component({
@@ -51,7 +55,7 @@ export class NielsenComponent implements OnInit, OnDestroy {
     }
   }
 
-  public openDialog(flag: number, idNielsen?: number, prodaja?:number, objekat?:number, artikl?:number, datum1?:number, datum2?:number) :void {
+  public openDialog(flag: number, idNielsen?: number, prodaja?:number, objekat?:Objekat, artikl?:Artikl, datum1?:Datum, datum2?:Datum) :void {
 
     const dialogRef = this.dialog.open (NielsenDialogComponent, {data: {idNielsen,prodaja, objekat, artikl,datum1,datum2}});
     dialogRef.componentInstance.flag = flag; 
@@ -66,7 +70,7 @@ export class NielsenComponent implements OnInit, OnDestroy {
   applyFilter(filterValue : string) {
 
     filterValue = filterValue.trim(); 
-    //trimuju se spejsovi 
+    
     filterValue = filterValue.toLowerCase(); 
     this.dataSource.filter = filterValue;
   }
