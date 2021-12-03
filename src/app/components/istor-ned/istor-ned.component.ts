@@ -13,7 +13,7 @@ import { IstorNedService } from 'src/app/services/istor-ned.service';
 })
 export class IstorNedComponent implements OnInit, OnDestroy {
 
-  displayedColumns = ["idIstorNed","idDatumOd","idDatumDo", "idObjekat","idArtikl", "prodaja"];
+  displayedColumns = ["idIstorNed","datum1","datum2", "objekat","artikl", "prodaja"];
   dataSource: MatTableDataSource<IstorNed>;
   subscription: Subscription;
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;

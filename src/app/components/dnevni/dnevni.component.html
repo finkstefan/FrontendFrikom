@@ -16,17 +16,17 @@
 
         <ng-container matColumnDef="datum">
             <mat-header-cell *matHeaderCellDef mat-sort-header>Datum izvestaja</mat-header-cell>
-            <mat-cell *matCellDef="let row"> {{ row.datum }}</mat-cell>
+            <mat-cell *matCellDef="let row"> {{ row.datum.datum }}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="objekat">
             <mat-header-cell *matHeaderCellDef mat-sort-header>Objekat </mat-header-cell>
-            <mat-cell *matCellDef="let row"> {{ row.objekat }}</mat-cell>
+            <mat-cell *matCellDef="let row"> {{ row.objekat.nazivObjekta }}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="artikl">
             <mat-header-cell *matHeaderCellDef mat-sort-header>Artikl  </mat-header-cell>
-            <mat-cell *matCellDef="let row"> {{ row.artikl }}</mat-cell>
+            <mat-cell *matCellDef="let row"> {{ row.artikl.naziv }}</mat-cell>
         </ng-container>
 
         <ng-container matColumnDef="ulazDobavljac">
