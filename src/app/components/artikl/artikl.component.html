@@ -19,7 +19,7 @@
     </ng-container>
     <ng-container matColumnDef="cenaBezpdv">
         <mat-header-cell *matHeaderCellDef mat-sort-header>Cena bez PDV </mat-header-cell>
-        <mat-cell *matCellDef="let row">{{ row.cenaBepdv }}</mat-cell>
+        <mat-cell *matCellDef="let row">{{ row.cenaBezpdv }}</mat-cell>
       </ng-container>
       <ng-container matColumnDef="cenaPdv">
         <mat-header-cell *matHeaderCellDef mat-sort-header>Cena sa PDV </mat-header-cell>
@@ -81,10 +81,10 @@
           </mat-header-cell>
           <mat-cell *matCellDef="let row; let i=index">
             <button mat-icon-button color="primary">
-              <mat-icon area-label="Edit" (click)="openDialog(2,row.idArtikl,row.cenaBepdv,row.cenaPdv,row.eonKod,row.komercijalnoPakovanje,row.maloprodajnaCena,row.naziv,row.promena,row.rok,row.transportniBarKod,row.transportnihPakovanja,row.zapremina,row.jedMere,row.vrstaAmbal)"> edit </mat-icon>
+              <mat-icon area-label="Edit" (click)="openDialog(2,row.idArtikl,row.cenaBezpdv,row.cenaPdv,row.eonKod,row.komercijalnoPakovanje,row.maloprodajnaCena,row.naziv,row.promena,row.rok,row.transportniBarKod,row.transportnihPakovanja,row.zapremina,row.jedMere,row.vrstaAmbal)"> edit </mat-icon>
                     </button>
       <button>
-              <mat-icon area-label="Delete" (click)="openDialog(3,row.idArtikl,row.cenaBepdv,row.cenaPdv,row.eonKod,row.komercijalnoPakovanje,row.maloprodajnaCena,row.naziv,row.promena,row.rok,row.transportniBarKod,row.transportnihPakovanja,row.zapremina,row.jedMere,row.vrstaAmbal)"> delete </mat-icon>
+              <mat-icon area-label="Delete" (click)="openDialog(3,row.idArtikl,row.cenaBezpdv,row.cenaPdv,row.eonKod,row.komercijalnoPakovanje,row.maloprodajnaCena,row.naziv,row.promena,row.rok,row.transportniBarKod,row.transportnihPakovanja,row.zapremina,row.jedMere,row.vrstaAmbal)"> delete </mat-icon>
                   </button>
           </mat-cell>
     </ng-container>

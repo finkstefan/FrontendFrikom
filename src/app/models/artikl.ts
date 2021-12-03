@@ -3,7 +3,7 @@ import { VrstaAmbal } from "./vrstaambal";
 
 export class Artikl{
     idArtikl: number;
-    cenaBezpdv: string;
+    cenaBezpdv: number;
    cenaPdv: number;
    eonKod: string;
    komercijalnoPakovanje: number;
