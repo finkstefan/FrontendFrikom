@@ -1,8 +1,14 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Artikl } from 'src/app/models/artikl';
+import { Datum } from 'src/app/models/datum';
 import { Mesecni } from 'src/app/models/mesecni';
+import { Objekat } from 'src/app/models/objekat';
+import { ArtiklService } from 'src/app/services/artikl.service';
+import { DatumService } from 'src/app/services/datum.service.service';
 import { MesecniService } from 'src/app/services/mesecni.service';
+import { ObjekatService } from 'src/app/services/objekat.service';
 
 @Component({
   selector: 'app-mesecni-dialog',
@@ -12,14 +18,40 @@ import { MesecniService } from 'src/app/services/mesecni.service';
 export class MesecniDialogComponent implements OnInit {
 
   public flag : number; 
+  artikli:Artikl[];
+  objekti:Objekat[];
+  datumi:Datum[];
 
   constructor(public snackBar: MatSnackBar,
     public dialogRef : MatDialogRef<MesecniDialogComponent>,
     @Inject (MAT_DIALOG_DATA) public data: Mesecni,
-    public mesecniService: MesecniService) { }
+    public mesecniService: MesecniService,
+    public artiklService: ArtiklService,
+    public objekatService: ObjekatService,
+    public datumService: DatumService) { }
 
   ngOnInit(): void {
+    this.artiklService.getAllArtikli().subscribe(
+      data => {
+        this.artikli = data;
+      }
+    );
 
+    this.objekatService.getAllObjekat().subscribe(
+      data => {
+        this.objekti = data;
+      }
+    );
+
+    this.datumService.getAllDatum().subscribe(
+      data => {
+        this.datumi = data;
+      }
+    );
+  }
+
+  compareTo(a ,b) {
+    return a.id == b.id;
   }
 
   public addMesecni () : void {

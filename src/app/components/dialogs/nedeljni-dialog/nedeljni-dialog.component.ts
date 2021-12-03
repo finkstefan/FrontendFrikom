@@ -4,6 +4,12 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Nedeljni } from 'src/app/models/nedeljni';
 import { NedeljniService } from 'src/app/services/nedeljni.service';
 import { Component, OnInit, Inject} from '@angular/core'; 
+import { Artikl } from 'src/app/models/artikl';
+import { Objekat } from 'src/app/models/objekat';
+import { Datum } from 'src/app/models/datum';
+import { ArtiklService } from 'src/app/services/artikl.service';
+import { ObjekatService } from 'src/app/services/objekat.service';
+import { DatumService } from 'src/app/services/datum.service.service';
 
 @Component({
   selector: 'app-ndeljni-dialog',
@@ -14,17 +20,43 @@ import { Component, OnInit, Inject} from '@angular/core';
 export class NedeljniDialogComponent implements OnInit {
 
   public flag: number;
+  artikli:Artikl[];
+  objekti:Objekat[];
+  datumi:Datum[];
 
   constructor(public snackBar: MatSnackBar,
   
     public dialogRef: MatDialogRef<NedeljniDialogComponent>,
     @Inject (MAT_DIALOG_DATA) public data: Nedeljni,
-    public nedeljniService: NedeljniService ) {
+    public nedeljniService: NedeljniService,
+    public artiklService: ArtiklService,
+    public objekatService: ObjekatService,
+    public datumService: DatumService ) {
      }
 
 
   ngOnInit(): void {
+    this.artiklService.getAllArtikli().subscribe(
+      data => {
+        this.artikli = data;
+      }
+    );
 
+    this.objekatService.getAllObjekat().subscribe(
+      data => {
+        this.objekti = data;
+      }
+    );
+
+    this.datumService.getAllDatum().subscribe(
+      data => {
+        this.datumi = data;
+      }
+    );
+  }
+
+  compareTo(a ,b) {
+    return a.id == b.id;
   }
 
   public addNedeljni (): void {

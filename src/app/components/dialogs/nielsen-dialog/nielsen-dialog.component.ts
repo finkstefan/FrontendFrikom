@@ -3,6 +3,12 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Nielsen } from 'src/app/models/nielsen';
 import { NielsenService } from 'src/app/services/nielsen.service';
 import { Component, OnInit, Inject} from '@angular/core'; 
+import { Artikl } from 'src/app/models/artikl';
+import { Objekat } from 'src/app/models/objekat';
+import { Datum } from 'src/app/models/datum';
+import { ObjekatService } from 'src/app/services/objekat.service';
+import { DatumService } from 'src/app/services/datum.service.service';
+import { ArtiklService } from 'src/app/services/artikl.service';
 
 @Component({
   selector: 'app-nielsen-dialog',
@@ -13,17 +19,44 @@ import { Component, OnInit, Inject} from '@angular/core';
 export class NielsenDialogComponent implements OnInit {
 
   public flag: number;
+  artikli:Artikl[];
+  objekti:Objekat[];
+  datumi:Datum[];
 
   constructor(public snackBar: MatSnackBar,
   
     public dialogRef: MatDialogRef<NielsenDialogComponent>,
     @Inject (MAT_DIALOG_DATA) public data: Nielsen,
-    public nielsenService: NielsenService ) {
+    public nielsenService: NielsenService,
+    public artiklService: ArtiklService,
+    public objekatService: ObjekatService,
+    public datumService: DatumService ) {
      }
 
 
   ngOnInit(): void {
+    this.artiklService.getAllArtikli().subscribe(
+      data => {
+        this.artikli = data;
+      }
+    );
 
+    this.objekatService.getAllObjekat().subscribe(
+      data => {
+        this.objekti = data;
+      }
+    );
+
+    this.datumService.getAllDatum().subscribe(
+      data => {
+        this.datumi = data;
+      }
+    );
+  }
+
+
+  compareTo(a ,b) {
+    return a.id == b.id;
   }
 
   public addNielsen (): void {
@@ -45,7 +78,7 @@ export class NielsenDialogComponent implements OnInit {
   public updateNielsen(): void {
 
     this.nielsenService.updateNielsen(this.data).subscribe(() => {
-      this.snackBar.open('Upesno modifikovan Nielsen: '+ this.data.idNielsen, 'OK', 
+      this.snackBar.open('Uspesno modifikovan Nielsen: '+ this.data.idNielsen, 'OK', 
        {duration : 2500})
       }),
       (error: Error) => {
