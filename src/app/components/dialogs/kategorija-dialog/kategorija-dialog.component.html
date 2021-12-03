@@ -5,10 +5,12 @@
     <form class="mat-dialog-content" #formControl="ngForm">
   <div class="form">
     <mat-form-field>
-      <input matInput placeholder = "Naziv" [(ngModel)]="data.kategorija" name = "naziv" [disabled]="flag==3" required/>
+      <input matInput placeholder = "Naziv" [(ngModel)]="data.kategorija" name = "kategorija" [disabled]="flag==3" required/>
     </mat-form-field>
+    </div>
+    <div>
     <mat-form-field>
-        <input matInput placeholder = "Potkategorija" [(ngModel)]="data.potkategorija" name = "naziv" [disabled]="flag==3" required/>
+        <input matInput placeholder = "Potkategorija" [(ngModel)]="data.potkategorija" name = "potkategorija" [disabled]="flag==3" required/>
       </mat-form-field>
   </div>
   <div mat-dialog-actions>

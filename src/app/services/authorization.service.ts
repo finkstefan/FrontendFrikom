@@ -19,8 +19,8 @@ export class AuthorizationService {
   
   
   public login(user: User): Observable<any> {
-    user.username = "peraperic";
-    user.password = "111";
+    // user.username = "peraperic";
+    // user.password = "111";
     return this.httpClient.post('http://localhost:8080/authenticate', user);
   }
 

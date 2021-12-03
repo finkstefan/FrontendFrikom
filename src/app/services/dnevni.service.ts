@@ -19,8 +19,7 @@ export class DnevniService {
     
   }
 
-  public getAllDnevni(): Observable<any> {
-    let header = new HttpHeaders();
+  public getAllDnevni(): Observable<any> {   
     // this.authorization.login(this.user).subscribe(data => {
     //   this.token = data.jwt;
     //   console.log(data);
@@ -29,9 +28,12 @@ export class DnevniService {
     //   header = header.append('Access-Control-Allow-Origin', '*');
     //   console.log(header);
     // });
-    header = header.append('Authorization', 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJhcGVyaWMiLCJleHAiOjE2MzgzMzMyODEsImlhdCI6MTYzODI5NzI4MX0.zetvXcVa3LhQJoTpuPMyBilgCypxDfgdy5NXmJSnixk');
-    console.log(header);
-    return this.httpClient.get(`${DNEVNI_URL}`, {headers: header});
+    //header = header.append('Access-Control-Allow-Origin', 'http://localhost:4200');
+    //header = header.append('Content-Type', 'application/json');
+    let header = new HttpHeaders();
+    console.log(localStorage.getItem('token'));
+    //header = header.append('Authorization', 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJhcGVyaWMiLCJleHAiOjE2Mzg0MjE1MTMsImlhdCI6MTYzODM4NTUxM30.BKLWyMkvnlLmjkpzfoNWspl76B45RAqdjQICGBeWbFE');
+    return this.httpClient.get(`${DNEVNI_URL}`);
   }
 
 

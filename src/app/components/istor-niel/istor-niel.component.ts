@@ -32,6 +32,7 @@ export class IstorNielComponent implements OnInit, OnDestroy {
   public loadData(){
     this.subscription = this.istorNielService.getAllIstorNiel()
      .subscribe(data => {
+       console.log(data);
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;

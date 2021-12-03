@@ -4,27 +4,27 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Subscription } from 'rxjs';
-import { Nedeljni } from 'src/app/models/nedeljni';
-import {NedeljniService} from 'src/app/services/nedeljni.service';
-import { NedeljniDialogComponent } from '../dialogs/nedeljni-dialog/nedeljni-dialog.component';
+import { Nielsen } from 'src/app/models/nielsen';
+import {NielsenService} from 'src/app/services/nielsen.service';
+import { NielsenDialogComponent } from '../dialogs/nielsen-dialog/nielsen-dialog.component';
 
 @Component({
-  selector: 'app-nedeljni',
-  templateUrl: './nedeljni.component.html',
-  styleUrls: ['./nedeljni.component.css']
+  selector: 'app-nielsen',
+  templateUrl: './nielsen.component.html',
+  styleUrls: ['./nielsen.component.css']
 })
-export class NedeljniComponent implements OnInit, OnDestroy {
+export class NielsenComponent implements OnInit, OnDestroy {
 
   subscription: Subscription;
-  displayedColumns = ['idNedeljni', 'prodaja', 'objekat', 'artikl','datum1','datum2', 'actions'];
-  dataSource: MatTableDataSource<Nedeljni>;
+  displayedColumns = ['idNielsen', 'prodaja', 'objekat','datum1','datum2','artikl','actions'];
+  dataSource: MatTableDataSource<Nielsen>;
 
 
-//komunikacija izmedju html i ts
+
 @ViewChild(MatSort, {static : false}) sort :MatSort; 
 @ViewChild(MatPaginator, {static : false}) paginator : MatPaginator;
 
-  constructor(private nedeljniService : NedeljniService,
+  constructor(private nielsenService : NielsenService,
     private dialog: MatDialog) { }
 
 
@@ -38,7 +38,7 @@ export class NedeljniComponent implements OnInit, OnDestroy {
   }
 
   public loadData() {
-    this.subscription = this.nedeljniService.getAllNedeljni().subscribe(
+    this.subscription = this.nielsenService.getAllNielsens().subscribe(
       data => {
         this.dataSource = new MatTableDataSource(data);
         this.dataSource.sort = this.sort; 
@@ -51,9 +51,9 @@ export class NedeljniComponent implements OnInit, OnDestroy {
     }
   }
 
-  public openDialog(flag: number, idNedeljni?: number, prodaja?:number, objekat?:number, artikl?:number, datum1?:number, datum2?:number) :void {
+  public openDialog(flag: number, idNielsen?: number, prodaja?:number, objekat?:number, artikl?:number, datum1?:number, datum2?:number) :void {
 
-    const dialogRef = this.dialog.open (NedeljniDialogComponent, {data: {idNedeljni,prodaja, objekat, artikl,datum1,datum2}});
+    const dialogRef = this.dialog.open (NielsenDialogComponent, {data: {idNielsen,prodaja, objekat, artikl,datum1,datum2}});
     dialogRef.componentInstance.flag = flag; 
     dialogRef.afterClosed().subscribe(res => {
       if(res==1)

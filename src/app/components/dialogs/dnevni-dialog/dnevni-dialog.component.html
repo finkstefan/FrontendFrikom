@@ -4,13 +4,47 @@
     <h3 mat-dialog-title *ngIf="flag == 2">Modifikacija postojeceg dnevnog izvestaja id: {{data.idDnevni}}</h3>
     <h3 mat-dialog-title *ngIf="flag == 3">Brisanje dnevnog izvestaja koji se nalazi na spisku id: {{data.idDnevni}}</h3>
     <form class="mat-dialog-content" #formControl= "ngForm">
-        <div class="form">
-           <mat-form-field>
-               <input matInput placeholder="idDnevni" [(ngModel)] = "data.idDnevni" name="idDnevni" [disabled]= "flag == 3" required>
         
-           </mat-form-field>     
-        </div>
-
+        <div class="form">
+            <mat-form-field>
+                <input matInput placeholder="Datum" [(ngModel)] = "data.datum" name="datum" [disabled]= "flag == 3" required>
+            </mat-form-field>     
+         </div>
+        <div class="form">
+            <mat-form-field>
+                <input matInput placeholder="Objekat" [(ngModel)] = "data.objekat" name="objekat" [disabled]= "flag == 3" required>
+            </mat-form-field>     
+         </div>
+         <div class="form">
+            <mat-form-field>
+                <input matInput placeholder="Artikl" [(ngModel)] = "data.artikl" name="artikl" [disabled]= "flag == 3" required>
+            </mat-form-field>     
+         </div>
+         <div class="form">
+            <mat-form-field>
+                <input matInput placeholder="Ulaz dobavljac" [(ngModel)] = "data.ulazDobavljac" name="ulazDobavljac" [disabled]= "flag == 3" required>
+            </mat-form-field>     
+         </div>
+         <div class="form">
+            <mat-form-field>
+                <input matInput placeholder="Ulaz magacin" [(ngModel)] = "data.ulazMagacin" name="ulazMagacin" [disabled]= "flag == 3" required>
+            </mat-form-field>     
+         </div>
+         <div class="form">
+            <mat-form-field>
+                <input matInput placeholder="Povracaj dobavljac" [(ngModel)] = "data.povracajDobavljac" name="povracajDobavljac" [disabled]= "flag == 3" required>
+            </mat-form-field>     
+         </div>
+         <div class="form">
+            <mat-form-field>
+                <input matInput placeholder="Povracaj magacin" [(ngModel)] = "data.povracajMagacin" name="povracajMagacin" [disabled]= "flag == 3" required>
+            </mat-form-field>     
+         </div>
+         <div class="form">
+            <mat-form-field>
+                <input matInput placeholder="Prodaja" [(ngModel)] = "data.prodaja" name="prodaja" [disabled]= "flag == 3" required>
+            </mat-form-field>     
+         </div>
         
          <!--<div class="form">
             <mat-form-field>

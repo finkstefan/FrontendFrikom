@@ -15,7 +15,7 @@ import { HomeComponent } from './components/core/home/home.component';
 import { AuthorComponent } from './components/core/author/author.component';
 import { AboutComponent } from './components/core/about/about.component';
 import { MatTableModule } from '@angular/material/table'
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -48,7 +48,7 @@ import { MesecniDialogComponent } from './components/dialogs/mesecni-dialog/mese
 import { NedeljniComponent } from './components/nedeljni/nedeljni.component';
 import { NedeljniDialogComponent } from './components/dialogs/nedeljni-dialog/nedeljni-dialog.component';
 import { DnevniDialogComponent } from './components/dialogs/dnevni-dialog/dnevni-dialog.component'; 
-import { DnevniComponent } from './components/grupa/dnevni.component';
+import { DnevniComponent } from './components/dnevni/dnevni.component';
 
 import { VrstaAmbalComponent } from './components/vrstaambal/vrstaambal.component';
 import { VrstaAmbalDialogComponent } from './components/dialogs/vrstaambal-dialog/vrstaambal-dialog.component';
@@ -58,6 +58,10 @@ import { KategorijaComponent } from './components/kategorija/kategorija.componen
 import { KategorijaDialogComponent } from './components/dialogs/kategorija-dialog/kategorija-dialog.component';
 import { ArtiklComponent } from './components/artikl/artikl.component';
 import { ArtiklDialogComponent } from './components/dialogs/artikl-dialog/artikl-dialog.component';
+import { AuthInterceptor } from './interceptor';
+import { LoginComponent } from './components/login/login.component';
+import { NielsenComponent } from './components/nielsen/nielsen.component';
+import { NielsenDialogComponent } from './components/dialogs/nielsen-dialog/nielsen-dialog.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +97,10 @@ import { ArtiklDialogComponent } from './components/dialogs/artikl-dialog/artikl
     KategorijaComponent,
     KategorijaDialogComponent,
     ArtiklComponent,
-    ArtiklDialogComponent
+    ArtiklDialogComponent,
+    LoginComponent,
+    NielsenComponent,
+    NielsenDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -117,7 +124,9 @@ import { ArtiklDialogComponent } from './components/dialogs/artikl-dialog/artikl
     MatSortModule,
     MatPaginatorModule
   ],
-  providers: [],
+  providers: [
+   // { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
