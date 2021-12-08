@@ -40,6 +40,8 @@ import { IstorNedComponent } from './components/istor-ned/istor-ned.component';
 import { IstorMesComponent } from './components/istor-mes/istor-mes.component';
 import { IstorDneComponent } from './components/istor-dne/istor-dne.component';
 import { IstorCenaComponent } from './components/istor-cena/istor-cena.component';
+import { LagerComponent } from './components/lager/lager.component';
+import { LagerDialogComponent } from './components/dialogs/lager-dialog/lager-dialog.component';
 
 import { DatumComponent } from './components/datum/datum.component';
 import { DatumDialogComponent } from './components/dialogs/datum-dialog/datum-dialog.component';
@@ -82,6 +84,8 @@ import { NielsenDialogComponent } from './components/dialogs/nielsen-dialog/niel
     IstorMesComponent,
     IstorDneComponent,
     IstorCenaComponent,
+    LagerComponent,
+    LagerDialogComponent,
     DnevniComponent,
     DnevniDialogComponent,
     DatumComponent,
