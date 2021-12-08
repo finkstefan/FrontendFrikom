@@ -7,7 +7,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Subscription } from 'rxjs';
 import { Lager } from 'src/app/models/lager';
 import { LagerService } from 'src/app/services/lager.service';
-import { ObjekatDialogComponent } from '../dialogs/lager-dialog/lager-dialog.component';
+import { LagerDialogComponent } from '../dialogs/lager-dialog/lager-dialog.component';
 
 @Component({
   selector: 'app-lager',
@@ -36,7 +36,7 @@ export class LagerComponent implements OnInit, OnDestroy {
   }
 
   public loadData() {
-    this.subscription = this.lagerService.getAllLageri().subscribe(
+    this.subscription = this.lagerService.getAllLager().subscribe(
       data => {
       
         this.dataSource = new MatTableDataSource(data);
@@ -53,7 +53,7 @@ export class LagerComponent implements OnInit, OnDestroy {
   }
 
   public openDialog(flag: number, idLager?: number, stanje?: number, artikl?: number, objekat?: number): void {
-    const dialogRef = this.dialog.open(ObjekatDialogComponent,
+    const dialogRef = this.dialog.open(LagerDialogComponent,
       {
         data: {idLager, stanje, artikl, objekat}
       });

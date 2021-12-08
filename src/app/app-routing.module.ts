@@ -14,6 +14,7 @@ import { IstorNielComponent } from './components/istor-niel/istor-niel.component
 import { JedMereComponent } from './components/jedmere/jedmere.component';
 import { KategObjComponent } from './components/kateg-obj/kateg-obj.component';
 import { KategorijaComponent } from './components/kategorija/kategorija.component';
+import { LagerComponent } from './components/lager/lager.component';
 import { LanacComponent } from './components/lanac/lanac.component';
 import { LoginComponent } from './components/login/login.component';
 import { MesecniComponent } from './components/mesecni/mesecni.component';
@@ -26,6 +27,7 @@ import { VrstaAmbalComponent } from './components/vrstaambal/vrstaambal.componen
 
 
 const routes: Routes = [
+  { path: 'lager', component: LagerComponent },
   { path: 'nielsen', component: NielsenComponent },
   {path: 'datum', component: DatumComponent},
   {path: 'login', component: LoginComponent},

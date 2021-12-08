@@ -84,10 +84,8 @@ import { NielsenDialogComponent } from './components/dialogs/nielsen-dialog/niel
     IstorMesComponent,
     IstorDneComponent,
     IstorCenaComponent,
-<<<<<<< HEAD
     LagerComponent,
-    LagerDialogComponent
-=======
+    LagerDialogComponent,
     DnevniComponent,
     DnevniDialogComponent,
     DatumComponent,
@@ -107,7 +105,6 @@ import { NielsenDialogComponent } from './components/dialogs/nielsen-dialog/niel
     LoginComponent,
     NielsenComponent,
     NielsenDialogComponent
->>>>>>> aeffebeb88c9a8252887bc0afa13d9ff0673e5ff
   ],
   imports: [
     BrowserModule,
