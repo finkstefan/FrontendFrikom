@@ -18,19 +18,19 @@
       <mat-cell *matCellDef="let row">{{ row.idIstorDne }}</mat-cell>
     </ng-container>
   
-    <ng-container matColumnDef="idDatum">
+    <ng-container matColumnDef="datum">
       <mat-header-cell *matHeaderCellDef mat-sort-header>Datum</mat-header-cell>
-      <mat-cell *matCellDef="let row">{{ row.idDatum }}</mat-cell>
+      <mat-cell *matCellDef="let row">{{ row.datum.datum }}</mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="idObjekat">
+    <ng-container matColumnDef="objekat">
         <mat-header-cell *matHeaderCellDef mat-sort-header>Objekat</mat-header-cell>
-        <mat-cell *matCellDef="let row">{{ row.idObjekat }}</mat-cell>
+        <mat-cell *matCellDef="let row">{{ row.objekat.nazivObjekta }}</mat-cell>
       </ng-container>
 
-    <ng-container matColumnDef="idArtikl">
+    <ng-container matColumnDef="artikl">
         <mat-header-cell *matHeaderCellDef mat-sort-header>Artikl</mat-header-cell>
-        <mat-cell *matCellDef="let row">{{ row.idArtikl }}</mat-cell>
+        <mat-cell *matCellDef="let row">{{ row.artikl.naziv }}</mat-cell>
       </ng-container>
 
       <ng-container matColumnDef="ulazDobavljac">

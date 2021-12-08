@@ -1,9 +1,13 @@
+import { Artikl } from "./artikl";
+import { Datum } from "./datum";
+import { Objekat } from "./objekat";
+
 export class IstorDne {
  
     idIstorDne: number;
-    idDatum: number;
-    idObjeka: number;
-    idArtikl: number;
+    datum: Datum;
+    objekat: Objekat;
+    artikl: Artikl;
     ulazDobavljac: number;
     ulazMagacin: number;
     povracajDobavljac: number;

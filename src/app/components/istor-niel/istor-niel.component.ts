@@ -13,7 +13,7 @@ import { IstorNielService } from 'src/app/services/istor-niel.service';
 })
 export class IstorNielComponent implements OnInit, OnDestroy {
 
-  displayedColumns = ["idIstorNiel","idDatumOd","idDatumDo","idArtikl", "prodaja"];
+  displayedColumns = ["idIstorNiel","datum1","datum2","artikl", "prodaja"];
   dataSource: MatTableDataSource<IstorNiel>;
   subscription: Subscription;
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
@@ -32,6 +32,7 @@ export class IstorNielComponent implements OnInit, OnDestroy {
   public loadData(){
     this.subscription = this.istorNielService.getAllIstorNiel()
      .subscribe(data => {
+       console.log(data);
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;

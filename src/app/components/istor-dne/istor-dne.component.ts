@@ -13,7 +13,7 @@ import { IstorDneService } from 'src/app/services/istor-dne.service';
 })
 export class IstorDneComponent implements OnInit, OnDestroy {
 
-  displayedColumns = ["idIstorDne","idDatum", "idObjekat","idArtikl", "ulazDobavljac", "ulazMagacin", "povracajDobavljac", "povracajMagacin", "prodaja"];
+  displayedColumns = ["idIstorDne","datum", "objekat","artikl", "ulazDobavljac", "ulazMagacin", "povracajDobavljac", "povracajMagacin", "prodaja"];
   dataSource: MatTableDataSource<IstorDne>;
   subscription: Subscription;
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
