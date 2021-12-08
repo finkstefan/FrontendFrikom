@@ -27,3 +27,4 @@ export const ISTOR_NED = 'http://localhost:8080/istorNed';
 export const ISTOR_MES = 'http://localhost:8080/istorMes';
 export const ISTOR_DNE = 'http://localhost:8080/istorDne';
 export const ISTOR_CENA = 'http://localhost:8080/istorCena';
+export const LAGER_URL = 'http://localhost:8080/lager';
