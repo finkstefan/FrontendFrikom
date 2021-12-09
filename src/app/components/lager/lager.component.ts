@@ -5,7 +5,9 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Subscription } from 'rxjs';
+import { Artikl } from 'src/app/models/artikl';
 import { Lager } from 'src/app/models/lager';
+import { Objekat } from 'src/app/models/objekat';
 import { LagerService } from 'src/app/services/lager.service';
 import { LagerDialogComponent } from '../dialogs/lager-dialog/lager-dialog.component';
 
@@ -52,7 +54,7 @@ export class LagerComponent implements OnInit, OnDestroy {
     )
   }
 
-  public openDialog(flag: number, idLager?: number, stanje?: number, artikl?: number, objekat?: number): void {
+  public openDialog(flag: number, idLager?: number, stanje?: number, artikl?: Artikl, objekat?: Objekat): void {
     const dialogRef = this.dialog.open(LagerDialogComponent,
       {
         data: {idLager, stanje, artikl, objekat}

@@ -3,6 +3,11 @@
     <h3 mat-dialog-title *ngIf="flag == 2">Modifikacija artikla: {{data.naziv}}</h3>
     <h3 mat-dialog-title *ngIf="flag == 3">Brisanje artikla: {{data.naziv}}</h3>
     <form class="mat-dialog-content" #formControl="ngForm">
+      <div class="form">
+        <mat-form-field>
+          <input matInput placeholder = "Naziv" [(ngModel)]="data.naziv" name = "naziv" [disabled]="flag==3" required/>
+        </mat-form-field>
+      </div>
   <div class="form">
     <mat-form-field>
       <input matInput placeholder = "Cena bez pdv" [(ngModel)]="data.cenaBezpdv" name = "cenaBezpdv" [disabled]="flag==3" required/>
@@ -12,6 +17,11 @@
       <mat-form-field>
           <input matInput placeholder = "Cena sa pdv" [(ngModel)]="data.cenaPdv" name = "cenaPdv" [disabled]="flag==3" required/>
         </mat-form-field>
+    </div> <!-- TODO napraviti kalkulator za cenu sa pdv-->
+    <div class="form">
+      <mat-form-field>
+        <input matInput placeholder = "Maloprodajna cena" [(ngModel)]="data.maloprodajnaCena" name = "maloprodajnac" [disabled]="flag==3" required/>
+      </mat-form-field>
     </div>
     <div class="form">
       <mat-form-field>
@@ -23,16 +33,8 @@
         <input matInput placeholder = "Komerc pakovanje" [(ngModel)]="data.komercijalnoPakovanje" name = "komercpak" [disabled]="flag==3" required/>
       </mat-form-field>
     </div>
-    <div class="form">
-      <mat-form-field>
-        <input matInput placeholder = "Maloprodajna cena" [(ngModel)]="data.maloprodajnaCena" name = "maloprodajnac" [disabled]="flag==3" required/>
-      </mat-form-field>
-    </div>
-    <div class="form">
-      <mat-form-field>
-        <input matInput placeholder = "Naziv" [(ngModel)]="data.naziv" name = "naziv" [disabled]="flag==3" required/>
-      </mat-form-field>
-    </div>
+    
+   
     <div class="form">
       <mat-form-field>
         <input matInput placeholder = "Promena" [(ngModel)]="data.promena" name = "promena" [disabled]="flag==3" required/>
