@@ -41,14 +41,14 @@
          </div>
 
          <div class="form">
-            <mat-form-field>
-                <mat-select [(ngModel)]="data.datum2" placeholder="Datum do" name="datumdo" [compareWith]="compareTo" [disabled]="flag == 3">
-                  <mat-option *ngFor="let datum of datumi" [value]="datum">
-                    {{ datum.datum }}
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
-         </div>
+          <mat-form-field>
+              <mat-select [(ngModel)]="data.datum2" placeholder="Datum do" name="datumdo" [compareWith]="compareTo" [disabled]="flag == 3">
+                <mat-option *ngFor="let datum of datumi" [value]="datum">
+                  {{ datum.datum }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+       </div>
       <!--  <div class="form">
             <mat-form-field>
                 <input matInput placeholder="objekat" [(ngModel)] = "data.objekat.nazivObjekta" name="objekat" [disabled]= "flag == 3" required>

@@ -1,10 +1,14 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Artikl } from 'src/app/models/artikl';
 
 import { Lager } from 'src/app/models/lager';
+import { Objekat } from 'src/app/models/objekat';
+import { ArtiklService } from 'src/app/services/artikl.service';
 
 import { LagerService } from 'src/app/services/lager.service';
+import { ObjekatService } from 'src/app/services/objekat.service';
 
 @Component({
   selector: 'app-lager-dialog',
@@ -14,17 +18,29 @@ import { LagerService } from 'src/app/services/lager.service';
 export class LagerDialogComponent implements OnInit {
 
   public flag: number;
+  artikli:Artikl[];
+objekti:Objekat[];
   
 
   constructor(public lagerService: LagerService,
-              
+              public artiklService:ArtiklService,
+              public objekatService:ObjekatService,
               public snackBar: MatSnackBar,
               public dialogRef: MatDialogRef<LagerDialogComponent>,
               @Inject (MAT_DIALOG_DATA) public data: Lager) { }
 
   ngOnInit(): void {
     
-   
+    this.artiklService.getAllArtikli()
+    .subscribe((data) => {
+      this.artikli = data;
+    })
+    
+      this.objekatService.getAllObjekat()
+    .subscribe((data) => {
+      this.objekti = data;
+    })
+
   }
 
   compareTo(a, b) {
